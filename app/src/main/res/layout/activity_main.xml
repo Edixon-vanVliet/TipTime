@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/store_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/cost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cost"
+            app:srcCompat="@drawable/ic_store"
+            tools:srcCompat="@drawable/ic_store" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cost"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="@string/text_cost"
+            app:layout_constraintStart_toEndOf="@+id/store_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cost_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColorHint="#616161" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/service_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/opinion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/opinion"
+            app:srcCompat="@drawable/ic_service"
+            tools:srcCompat="@drawable/ic_service" />
+
+        <TextView
+            android:id="@+id/opinion"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_opinion"
+            app:layout_constraintStart_toEndOf="@+id/service_image"
+            app:layout_constraintTop_toBottomOf="@+id/cost" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_opinion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:checkedButton="@+id/radio_ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/opinion"
+            app:layout_constraintTop_toBottomOf="@+id/opinion">
+
+            <RadioButton
+                android:id="@+id/radio_amazing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_amazing" />
+
+            <RadioButton
+                android:id="@+id/radio_good"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_good" />
+
+            <RadioButton
+                android:id="@+id/radio_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_ok" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/round_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/switch_round"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/switch_round"
+            app:srcCompat="@drawable/ic_round_up"
+            tools:srcCompat="@drawable/ic_round_up" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_round"
+            style="@style/Widget.TipTime.CompoundButton.Switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:text="@string/switch_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/round_image"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_opinion" />
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/switch_round"
+            app:layout_constraintTop_toBottomOf="@+id/switch_round" />
+
+        <TextView
+            android:id="@+id/total"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_calculate"
+            tools:text="@string/text_total" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

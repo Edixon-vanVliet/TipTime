@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tiempo de Propina</string>
+    <string name="text_cost">Costo del Servicio</string>
+    <string name="text_opinion">¿Cómo fue el Servicio?</string>
+    <string name="radio_ok">" OK (15%)"</string>
+    <string name="radio_amazing">Asombroso (20%)</string>
+    <string name="radio_good">Bueno (18%)</string>
+    <string name="switch_round">¿Redondear propina?</string>
+    <string name="button_calculate">Calcular</string>
+    <string name="text_total">Propina Total: %s</string>
+    <string name="image_service">Servicio</string>
+    <string name="image_store">Tienda</string>
+    <string name="image_round">Redondear</string>
+</resources>
